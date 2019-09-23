@@ -1,0 +1,9 @@
+package constant
+
+const (
+	ONE_KILO		= 1000
+	ONE_KILOBYTE	= 1024
+	ONE_MILLION		= 1000000
+	ONE_MEGABYTE	= 1048576
+	OUNCE_TO_GRAM	= 32.148
+)
