@@ -2,9 +2,12 @@ package helper
 
 import (
 	"time"
-	"strconv"
+	//"strconv"
+
+	"github.com/ihsankurniawan/go-helper/constant"
 )
 
+/*
 func EnglishTimeConvertToIndonesia(t time.Time, format string) string {
 	var DayName string
 	var Day 	string
@@ -83,5 +86,9 @@ func EnglishTimeConvertToIndonesia(t time.Time, format string) string {
 		break
 	}
 
-	return t.format(format)
+	return t.Format(format)
+}*/
+
+func GetJakartaNowTime() time.Time {
+	return time.Now().In(constant.JakartaTime)
 }

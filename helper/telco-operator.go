@@ -2,7 +2,7 @@ package helper
 
 import "sort"
 
-func TselPrefix (handphone string) bool {
+func TselPrefix (hp string) bool {
 	if len(hp) < 5 {
 		return false
 	}
@@ -18,7 +18,7 @@ func TselPrefix (handphone string) bool {
 		"62853",
 		"62851",
 	}
-	pref := handphone[0:5]
+	pref := hp[0:5]
 	sort.Strings(tselPrefix)
 	i := sort.SearchStrings(tselPrefix, pref)
 	if i < len(tselPrefix) && tselPrefix[i] == pref {
@@ -28,7 +28,7 @@ func TselPrefix (handphone string) bool {
 	return false
 }
 
-func IsatPrefix (handphone string) bool {
+func IsatPrefix (hp string) bool {
 	if len(hp) < 5 {
 		return false
 	}
@@ -42,7 +42,7 @@ func IsatPrefix (handphone string) bool {
 		"62857", // IM3
 		"62858", // Mentari
 	}
-	pref := handphone[0:5]
+	pref := hp[0:5]
 	sort.Strings(isatPrefix)
 	i := sort.SearchStrings(isatPrefix, pref)
 	if i < len(isatPrefix) && isatPrefix[i] == pref {
@@ -52,7 +52,7 @@ func IsatPrefix (handphone string) bool {
 	return false
 }
 
-func XlPrefix (handphone string) bool {
+func XlPrefix (hp string) bool {
 	if len(hp) < 5 {
 		return false
 	}
@@ -66,7 +66,7 @@ func XlPrefix (handphone string) bool {
 		"62878", // Prabayar
 		"62879", // Prabayar
 	}
-	pref := handphone[0:5]
+	pref := hp[0:5]
 	sort.Strings(isatPrefix)
 	i := sort.SearchStrings(isatPrefix, pref)
 	if i < len(isatPrefix) && isatPrefix[i] == pref {

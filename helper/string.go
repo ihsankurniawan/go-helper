@@ -8,7 +8,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/ihsankurniawan/constant"
+	"github.com/ihsankurniawan/go-helper/constant"
 )
 
 var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))

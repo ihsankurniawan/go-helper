@@ -1,4 +1,4 @@
-package constanta
+package constant
 
 const STRING_NUMBER 		= "0123456789"
 const STRING_ALPHABET_LOWER	= "abcdefghijklmnopqrstuvwxyz"
