@@ -1,4 +1,4 @@
-package constant
+package helper
 
 const (
 	ONE_KILO		= 1000

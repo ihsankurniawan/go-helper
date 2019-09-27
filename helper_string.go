@@ -7,8 +7,6 @@ import (
 	"strings"
 	"time"
 	"unicode"
-
-	"github.com/ihsankurniawan/go-helper/constant"
 )
 
 var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -30,7 +28,7 @@ func StringRandomWithCharset(length int, charset string) string {
 	Ex: StringRandom(5) // return "ab12F"
 */
 func StringRandom(length int) string {
-	return StringRandomWithCharset(length, constant.STRING_ALPHANUMERIC)
+	return StringRandomWithCharset(length, STRING_ALPHANUMERIC)
 }
 
 /*
