@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"io/ioutil"
+	"net/url"
 	"net/http"
 	"time"
 	"io"
@@ -57,4 +58,23 @@ func GetXmlDataFromUrl(url string, target interface{}) error {
 	defer r.Body.Close()
 
 	return xml.NewDecoder(r.Body).Decode(target)
+}
+
+/*
+	isValidUrl tests a string to determine if it is a well-structured url or not.
+	https://golangcode.com/how-to-check-if-a-string-is-a-url/
+	Ex: IsValidUrl("https://someurl.com")
+ */
+func IsValidUrl(uri string) bool {
+	_, err := url.ParseRequestURI(uri)
+	if err != nil {
+		return false
+	}
+
+	u, err := url.Parse(uri)
+	if err != nil || u.Scheme == "" || u.Host == "" {
+		return false
+	}
+
+	return true
 }
